@@ -1,0 +1,21 @@
+ALGORITHM Insertion_Sort
+VAR
+    i,j, key : INTEGER ;
+    arr : ARRAY_OF INTEGER [];
+
+BEGIN
+    FOR i FROM 0 TO arr.length DO
+        Read(arr[i]);
+    END_FOR
+
+    FOR i FROM 1 TO arr.length DO
+        key = arr[i];
+        j:=i-1; 
+        while (j>=0 and arr[j-1]>key)
+            arr[j+1] := arr[j];
+            j:=j-1;
+        end while
+         arr[j+1] := key;
+    END_FOR
+
+END
