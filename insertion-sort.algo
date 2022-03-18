@@ -1,24 +1,24 @@
 ALGORITHM Insertion_Sort
 VAR
     i,j, key : INTEGER ;
-    arr : ARRAY_OF INTEGER [];
+    cards : ARRAY_OF INTEGER [];
 
 BEGIN
-    FOR i FROM 0 TO arr.length DO
-        Read(arr[i]);
+    FOR i FROM 0 TO cards.length DO
+        Read(cards[i]);
     END_FOR
 
-    FOR i FROM 1 TO arr.length DO
-        key = arr[i];
+    FOR i FROM 1 TO cards.length DO
+        key = cards[i];
         j:=i-1; 
-        while (j>=0 and arr[j-1]>key)
-            arr[j+1] := arr[j];
+        WHILE (j>=0 and cards[j-1]>key) DO
+            cards[j+1] := cards[j];
             j:=j-1;
-        end while
-         arr[j+1] := key;
+        END_WHILE     
+         cards[j+1] := key;
     END_FOR
 
-    FOR i FROM 1 TO arr.length DO
-        Write(arr[i]);
+    FOR i FROM 1 TO cards.length DO
+        Write(cards[i]);
     END_FOR
 END
