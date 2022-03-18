@@ -18,4 +18,7 @@ BEGIN
          arr[j+1] := key;
     END_FOR
 
+    FOR i FROM 1 TO arr.length DO
+        Write(arr[i]);
+    END_FOR
 END
